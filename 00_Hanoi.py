@@ -10,5 +10,5 @@ def move(n, a, b, c):
 		move(1, a, b, c)
 		move(n-1, b, a, c)
 
-if __name__ == '__main__':
+if __name__ == '__main__':   
 	move(3, 'A', 'B', 'C')
