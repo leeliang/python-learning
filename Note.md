@@ -11,5 +11,18 @@ def person(name, age=10, *args, **kw, *, city, job):
 *  命名关键字参数：传入指定的参数名和值。
 
 
+## 2 GENERATOR
+有两种方式 (x for x in [x,x,x])和关键字 yield。 
 
+## 3 isinstance
+判断一个变量是否是某个类型可以用isinstance()判断。
 
+## 4 `__slots__`
+```PYTHON
+class Student(object):
+    __slots__ = ('name', 'age') # 用tuple定义允许绑定的属性名称
+```
+使用__slots__要注意，__slots__定义的属性仅对当前类实例起作用，对继承的子类是不起作用的。
+
+## 5 额外复习
+定制类、错误处理
