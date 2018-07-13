@@ -1,8 +1,10 @@
 # Tabel of Contents
 
 =========
-* [1 汉诺塔](#1.汉诺塔)
-* [2 切片去除字符首位空格](#2.切片去除字符首位空格)
+* [1 汉诺塔](#1汉诺塔)
+* [2 切片去除字符首位空格](#2切片去除字符首位空格)
+* [3 杨辉三角](#3杨辉三角)
+* [4 过滤回数](#4过滤回数)
 
 =========
 
@@ -57,4 +59,29 @@ def trim(s):
         return trim(s[1:])
     else：
         return trim(s[:-1])
+```
+
+
+## 3.杨辉三角
+杨辉三角的两边为 1，中间的元素为上一行的相邻元素相加。
+```python
+def triangles():
+	a = [1]
+	while True:
+		yield a
+		a = [1] + [ a[i]+a[i+1] for i in range(len(a)-1) ] + [1]
+```
+
+
+## 4.过滤回数
+将数字变为字符，并利用切片反转字符，若相等则为回数。
+
+切片原理： [begin:end:step]，当 step<0 时，表示从右往左切。
+```python
+def is_palindrome(n):
+	if str(n) == str(n)[::-1]:
+		return True
+
+if __name__ == '__main__':
+	print(list(filter(is_palindrome, range(1, 200))))
 ```
